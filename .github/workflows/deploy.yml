@@ -24,9 +24,9 @@ jobs:
       - name: Build
         run: npm run build  # Replace with your Next.js build command
 
-      - name: Deploy to GitHub Pages
+      - name: make copy to experimental branch
         run: |
-
+          git config --global user.email "chakrabortyd943@gmail.com"
           git checkout -b gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages"
