@@ -26,8 +26,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config --global user.email ${{ secrets.EMAIL}}
-          git config --global user.name Diptanu
+
           git checkout -b gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages"
