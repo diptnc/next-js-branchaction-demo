@@ -16,21 +16,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18  # Adjust the Node.js version as needed
+          node-version: 14  # Adjust the Node.js version as needed
 
       - name: Install dependencies
         run: npm install  # Replace with yarn if you use Yarn
 
       - name: Build
         run: npm run build  # Replace with your Next.js build command
-        
-      - name: Deploy to experiment
+
+      - name: Create and Push to Experiment Branch
         run: |
           git config --global user.email "chakrabortyd943@gmail.com"
-          git config --global user.name "diptanu chakraborty"
-          git checkout -b experiment  # Create and switch to the 'experiment' branch
-          git reset --hard
+          git config --global user.name "Diptanu Chakraborty"
+          git checkout -b experiment
           git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push -u origin experiment  # Push changes to the 'experiment' branch
-      
+          git commit -m "Deploy to Experiment Branch"
+          git push -u origin experiment
