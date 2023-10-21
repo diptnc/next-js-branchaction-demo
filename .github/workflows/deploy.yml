@@ -27,6 +27,7 @@ jobs:
       - name: make copy to experimental branch
         run: |
           git config --global user.email "chakrabortyd943@gmail.com"
+          git config --global user.name "diptanu chakraborty"
           git checkout -b gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages"
